@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7yH-7v-LDE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GILROY-MEDIUM.OTF">
+            <string>Gilroy-Medium</string>
+        </array>
+        <array key="GILROY-SEMIBOLD.OTF">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bgV-Zk-5xd">
+            <objects>
+                <navigationController id="7yH-7v-LDE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="57G-7q-v5E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f56-lA-Erg" kind="relationship" relationship="rootViewController" id="CaX-t4-3TN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XW-uB-XRy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="27"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aY2-39-wbm">
+            <objects>
+                <tabBarController id="f56-lA-Erg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ydD-e6-gLx"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Jc-J0-8Cn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="39w-YM-5Ok" kind="relationship" relationship="viewControllers" id="u3j-QX-OzH"/>
+                        <segue destination="ZQ5-Hv-EnW" kind="relationship" relationship="viewControllers" id="XBT-lC-XaT"/>
+                        <segue destination="hu7-at-aDi" kind="relationship" relationship="viewControllers" id="gSj-qB-q74"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7S-vG-e2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="27"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="cgw-48-HJu">
+            <objects>
+                <navigationController id="39w-YM-5Ok" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="home" id="bcn-hx-qDH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GA0-0E-VA8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UwO-IO-0fl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="tYT-v2-QXU" kind="relationship" relationship="rootViewController" id="Bo0-rA-pmb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tq-Sk-RZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="-689"/>
+        </scene>
+        <!--Book List-->
+        <scene sceneID="Des-Gu-imd">
+            <objects>
+                <viewController storyboardIdentifier="DashboardVC" id="tYT-v2-QXU" customClass="DashboardVC" customModule="BookManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="u0D-CX-K1h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-fa-yUi">
+                                <rect key="frame" x="12" y="76" width="390" height="637"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for author" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skL-N5-1lG">
+                                <rect key="frame" x="15" y="0.0" width="384" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vo2-4M-7vL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="skL-N5-1lG" firstAttribute="leading" secondItem="vo2-4M-7vL" secondAttribute="leading" constant="15" id="0DO-Eg-pNc"/>
+                            <constraint firstItem="vo2-4M-7vL" firstAttribute="trailing" secondItem="4fK-fa-yUi" secondAttribute="trailing" constant="12" id="Ddl-xG-1ZQ"/>
+                            <constraint firstItem="skL-N5-1lG" firstAttribute="top" secondItem="vo2-4M-7vL" secondAttribute="top" id="MEc-3y-NgJ"/>
+                            <constraint firstItem="4fK-fa-yUi" firstAttribute="top" secondItem="skL-N5-1lG" secondAttribute="bottom" constant="20" id="SCT-dp-yQQ"/>
+                            <constraint firstItem="skL-N5-1lG" firstAttribute="trailing" secondItem="vo2-4M-7vL" secondAttribute="trailing" constant="-15" id="b7s-4c-zzx"/>
+                            <constraint firstItem="4fK-fa-yUi" firstAttribute="leading" secondItem="vo2-4M-7vL" secondAttribute="leading" constant="12" id="drp-R0-5tA"/>
+                            <constraint firstItem="vo2-4M-7vL" firstAttribute="bottom" secondItem="4fK-fa-yUi" secondAttribute="bottom" constant="12" id="nSy-BK-PRV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Book List" id="hzL-XJ-iCF"/>
+                    <connections>
+                        <outlet property="bookHomeTbl" destination="4fK-fa-yUi" id="gf0-M4-iN3"/>
+                        <outlet property="countrySearch" destination="skL-N5-1lG" id="GJr-Im-Kxe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bt-fv-moy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360.8695652173915" y="-689.0625"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="M6D-9i-IyU">
+            <objects>
+                <navigationController id="ZQ5-Hv-EnW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="history" id="fiX-jd-EWF"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9yH-JX-AFe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ccH-84-ndj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="WtU-gM-tj1" kind="relationship" relationship="rootViewController" id="kG3-rw-e7n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8B-hL-CFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="27"/>
+        </scene>
+        <!--Book-->
+        <scene sceneID="ake-nz-7ok">
+            <objects>
+                <navigationController id="hu7-at-aDi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Book" image="book" id="Aeq-LM-ZcQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="T89-ey-PUA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KZx-io-XsC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="MeD-xU-Rye" kind="relationship" relationship="rootViewController" id="HKb-bq-CF2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iP-CA-0Fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="728"/>
+        </scene>
+        <!--Add BookVC-->
+        <scene sceneID="nll-EF-icr">
+            <objects>
+                <viewController storyboardIdentifier="AddBookVC" id="MeD-xU-Rye" customClass="AddBookVC" customModule="BookManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="sXN-Cd-YnA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHZ-bg-waV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD7-Ve-J5Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-GW-2BI">
+                                                <rect key="frame" x="15" y="15" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter book name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rv3-6S-JmL">
+                                                <rect key="frame" x="15" y="40.5" width="389" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="9PR-JI-o2z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEX-Ze-DqU">
+                                                <rect key="frame" x="15" y="92.5" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter author name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-v9-0cU">
+                                                <rect key="frame" x="15" y="118" width="389" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Price" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmD-Ii-r36">
+                                                <rect key="frame" x="15" y="172" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-7f-V20">
+                                                <rect key="frame" x="15" y="197.5" width="389" height="34"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Synopsis" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na2-c1-xcm">
+                                                <rect key="frame" x="15" y="251.5" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter book synopsis" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G99-uK-gvd">
+                                                <rect key="frame" x="15" y="277" width="389" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Quantity" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVJ-dF-F6L">
+                                                <rect key="frame" x="15" y="331" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter book quantity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wU7-tS-7tP">
+                                                <rect key="frame" x="15" y="356.5" width="389" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-vF-QLK">
+                                                <rect key="frame" x="15" y="410.5" width="384" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="15"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-ce-Cxn">
+                                                <rect key="frame" x="15" y="436" width="389" height="100"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="e32-FI-iNn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-f7-ZGH">
+                                                <rect key="frame" x="118.5" y="563" width="177" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.69496482609999999" blue="0.82833534480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="6ZA-d4-bUG"/>
+                                                    <constraint firstAttribute="height" constant="50" id="QmP-td-3gJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickedOnSaveBtn:" destination="MeD-xU-Rye" eventType="touchUpInside" id="Gk0-K2-TDq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LZX-vF-QLK" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="17S-BB-V2f"/>
+                                            <constraint firstItem="wU7-tS-7tP" firstAttribute="height" secondItem="rv3-6S-JmL" secondAttribute="height" multiplier="1.0625" id="2xI-pM-A0y"/>
+                                            <constraint firstItem="LZX-vF-QLK" firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" id="3bn-Yv-0jG"/>
+                                            <constraint firstItem="wU7-tS-7tP" firstAttribute="top" secondItem="KVJ-dF-F6L" secondAttribute="bottom" constant="8" id="6ic-ja-8m9"/>
+                                            <constraint firstItem="EEX-Ze-DqU" firstAttribute="top" secondItem="rv3-6S-JmL" secondAttribute="bottom" constant="20" id="9ft-RM-zta"/>
+                                            <constraint firstItem="ZPS-7f-V20" firstAttribute="top" secondItem="UmD-Ii-r36" secondAttribute="bottom" constant="8" id="9hd-6W-LWi"/>
+                                            <constraint firstItem="ZPS-7f-V20" firstAttribute="height" secondItem="rv3-6S-JmL" secondAttribute="height" multiplier="1.0625" id="9xh-i3-utR"/>
+                                            <constraint firstItem="UmD-Ii-r36" firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" id="Dht-uf-grL"/>
+                                            <constraint firstItem="ZPS-7f-V20" firstAttribute="leading" secondItem="UmD-Ii-r36" secondAttribute="leading" id="EjD-cM-h7f"/>
+                                            <constraint firstItem="ESR-v9-0cU" firstAttribute="height" secondItem="rv3-6S-JmL" secondAttribute="height" multiplier="1.0625" id="GYn-na-lM5"/>
+                                            <constraint firstItem="UmD-Ii-r36" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="IKJ-J3-Xvb"/>
+                                            <constraint firstAttribute="height" constant="720" id="KUi-cg-VcO"/>
+                                            <constraint firstItem="KVJ-dF-F6L" firstAttribute="top" secondItem="G99-uK-gvd" secondAttribute="bottom" constant="20" id="Kvx-Ua-ykl"/>
+                                            <constraint firstItem="UmD-Ii-r36" firstAttribute="top" secondItem="ESR-v9-0cU" secondAttribute="bottom" constant="20" id="MN4-4I-npW"/>
+                                            <constraint firstItem="G99-uK-gvd" firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" id="NjU-Q0-sTb"/>
+                                            <constraint firstItem="ESR-v9-0cU" firstAttribute="leading" secondItem="EEX-Ze-DqU" secondAttribute="leading" id="Nsp-hK-rdN"/>
+                                            <constraint firstItem="ZPS-7f-V20" firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" id="QVf-Lt-dS6"/>
+                                            <constraint firstItem="Na2-c1-xcm" firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" id="Rfx-1C-vPx"/>
+                                            <constraint firstItem="Gti-GW-2BI" firstAttribute="top" secondItem="bD7-Ve-J5Q" secondAttribute="top" constant="15" id="SGW-Nj-Mtj"/>
+                                            <constraint firstItem="GUm-ce-Cxn" firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" id="VMg-AS-kon"/>
+                                            <constraint firstItem="ESR-v9-0cU" firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" id="WTW-M6-I5E"/>
+                                            <constraint firstItem="wU7-tS-7tP" firstAttribute="leading" secondItem="KVJ-dF-F6L" secondAttribute="leading" id="WVL-xG-cjA"/>
+                                            <constraint firstItem="G99-uK-gvd" firstAttribute="leading" secondItem="Na2-c1-xcm" secondAttribute="leading" id="aZC-W3-Y5Q"/>
+                                            <constraint firstItem="EEX-Ze-DqU" firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" id="aae-yz-AdB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" constant="15" id="ekd-uW-xdW"/>
+                                            <constraint firstItem="rv3-6S-JmL" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="f3M-mD-Io9"/>
+                                            <constraint firstItem="ZPS-7f-V20" firstAttribute="leading" secondItem="rv3-6S-JmL" secondAttribute="leading" id="fgD-rR-Wtc"/>
+                                            <constraint firstItem="iTU-f7-ZGH" firstAttribute="top" secondItem="GUm-ce-Cxn" secondAttribute="bottom" constant="27" id="gUK-SK-7rJ"/>
+                                            <constraint firstItem="Na2-c1-xcm" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="ggR-do-4K7"/>
+                                            <constraint firstItem="GUm-ce-Cxn" firstAttribute="leading" secondItem="rv3-6S-JmL" secondAttribute="leading" id="h1R-53-OhB"/>
+                                            <constraint firstItem="Na2-c1-xcm" firstAttribute="top" secondItem="ZPS-7f-V20" secondAttribute="bottom" constant="20" id="huc-Rz-zqb"/>
+                                            <constraint firstItem="wU7-tS-7tP" firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" id="iCn-6n-CxC"/>
+                                            <constraint firstAttribute="trailing" secondItem="rv3-6S-JmL" secondAttribute="trailing" constant="10" id="iWD-Tx-Uck"/>
+                                            <constraint firstItem="iTU-f7-ZGH" firstAttribute="centerX" secondItem="bD7-Ve-J5Q" secondAttribute="centerX" id="iic-EK-Zc5"/>
+                                            <constraint firstItem="KVJ-dF-F6L" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="iix-qS-TeB"/>
+                                            <constraint firstItem="rv3-6S-JmL" firstAttribute="top" secondItem="Gti-GW-2BI" secondAttribute="bottom" constant="8" id="l7d-DI-WC8"/>
+                                            <constraint firstItem="G99-uK-gvd" firstAttribute="height" secondItem="rv3-6S-JmL" secondAttribute="height" multiplier="1.0625" id="nJe-zQ-leX"/>
+                                            <constraint firstItem="ESR-v9-0cU" firstAttribute="top" secondItem="EEX-Ze-DqU" secondAttribute="bottom" constant="8" id="p5V-Ia-xvT"/>
+                                            <constraint firstItem="KVJ-dF-F6L" firstAttribute="trailing" secondItem="Gti-GW-2BI" secondAttribute="trailing" id="pMz-8b-GwD"/>
+                                            <constraint firstItem="LZX-vF-QLK" firstAttribute="top" secondItem="wU7-tS-7tP" secondAttribute="bottom" constant="20" id="qFc-EG-IHM"/>
+                                            <constraint firstItem="Gti-GW-2BI" firstAttribute="leading" secondItem="bD7-Ve-J5Q" secondAttribute="leading" constant="15" id="qay-fC-cXv"/>
+                                            <constraint firstItem="EEX-Ze-DqU" firstAttribute="leading" secondItem="Gti-GW-2BI" secondAttribute="leading" id="qfW-GO-ddl"/>
+                                            <constraint firstItem="GUm-ce-Cxn" firstAttribute="top" secondItem="LZX-vF-QLK" secondAttribute="bottom" constant="8" id="tJC-vL-ghi"/>
+                                            <constraint firstItem="G99-uK-gvd" firstAttribute="top" secondItem="Na2-c1-xcm" secondAttribute="bottom" constant="8" id="tdC-8q-WlI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bD7-Ve-J5Q" firstAttribute="top" secondItem="WHZ-bg-waV" secondAttribute="top" id="2Y1-Np-yeM"/>
+                                    <constraint firstAttribute="trailing" secondItem="bD7-Ve-J5Q" secondAttribute="trailing" id="993-ki-5Bp"/>
+                                    <constraint firstAttribute="bottom" secondItem="bD7-Ve-J5Q" secondAttribute="bottom" constant="-36" id="HuE-Be-V4A"/>
+                                    <constraint firstItem="bD7-Ve-J5Q" firstAttribute="leading" secondItem="WHZ-bg-waV" secondAttribute="leading" id="c8A-9s-fak"/>
+                                    <constraint firstItem="bD7-Ve-J5Q" firstAttribute="centerX" secondItem="WHZ-bg-waV" secondAttribute="centerX" id="xwa-Y5-A4X"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ijM-Rl-F4Y"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WHZ-bg-waV" firstAttribute="centerX" secondItem="sXN-Cd-YnA" secondAttribute="centerX" id="Ddr-Ro-fFc"/>
+                            <constraint firstItem="WHZ-bg-waV" firstAttribute="width" secondItem="sXN-Cd-YnA" secondAttribute="width" id="MGZ-68-fTc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="WHZ-bg-waV" secondAttribute="bottom" constant="-17" id="jlH-RQ-4AG"/>
+                            <constraint firstItem="bD7-Ve-J5Q" firstAttribute="width" secondItem="sXN-Cd-YnA" secondAttribute="width" id="mju-DF-UfF"/>
+                            <constraint firstItem="WHZ-bg-waV" firstAttribute="top" secondItem="sXN-Cd-YnA" secondAttribute="top" id="prW-Rw-j6c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c9i-0w-4i0"/>
+                    <size key="freeformSize" width="414" height="830"/>
+                    <connections>
+                        <outlet property="authorNameTxt" destination="ESR-v9-0cU" id="Sfc-6X-Men"/>
+                        <outlet property="bookNameTxt" destination="rv3-6S-JmL" id="faq-Lk-Vkc"/>
+                        <outlet property="descriptionTxtView" destination="GUm-ce-Cxn" id="Ez3-Fi-D4D"/>
+                        <outlet property="priceTxt" destination="ZPS-7f-V20" id="9C4-Yi-5hW"/>
+                        <outlet property="quantityTxt" destination="wU7-tS-7tP" id="Je9-LB-beP"/>
+                        <outlet property="saveBtn" destination="iTU-f7-ZGH" id="iH5-Wh-AY5"/>
+                        <outlet property="synopsisTxt" destination="G99-uK-gvd" id="1kl-9c-yrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YP1-cp-rwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="695"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="0e6-sU-bLP">
+            <objects>
+                <viewController storyboardIdentifier="PurchaseHistoryVC" id="WtU-gM-tj1" customClass="PurchaseHistoryVC" customModule="BookManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="aKL-Wh-CzG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nAK-s6-tje">
+                                <rect key="frame" x="12" y="76" width="390" height="637"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for author" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h06-oU-GYd">
+                                <rect key="frame" x="15" y="0.0" width="384" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jhZ-XK-zsL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jhZ-XK-zsL" firstAttribute="bottom" secondItem="nAK-s6-tje" secondAttribute="bottom" constant="12" id="1L0-p7-Mgk"/>
+                            <constraint firstItem="jhZ-XK-zsL" firstAttribute="trailing" secondItem="nAK-s6-tje" secondAttribute="trailing" constant="12" id="8Qv-it-yFB"/>
+                            <constraint firstItem="h06-oU-GYd" firstAttribute="top" secondItem="jhZ-XK-zsL" secondAttribute="top" id="GPQ-NM-gdl"/>
+                            <constraint firstItem="nAK-s6-tje" firstAttribute="top" secondItem="h06-oU-GYd" secondAttribute="bottom" constant="20" id="OXh-Dv-rgS"/>
+                            <constraint firstItem="h06-oU-GYd" firstAttribute="leading" secondItem="jhZ-XK-zsL" secondAttribute="leading" constant="15" id="vJu-tt-qGi"/>
+                            <constraint firstItem="nAK-s6-tje" firstAttribute="leading" secondItem="jhZ-XK-zsL" secondAttribute="leading" constant="12" id="x62-Zl-YWL"/>
+                            <constraint firstItem="h06-oU-GYd" firstAttribute="trailing" secondItem="jhZ-XK-zsL" secondAttribute="trailing" constant="-15" id="xfz-Ct-YPw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="9V6-4z-OAM"/>
+                    <connections>
+                        <outlet property="countrySearch" destination="h06-oU-GYd" id="ZN7-lS-zec"/>
+                        <outlet property="historyBookTbl" destination="nAK-s6-tje" id="etX-sP-G09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rve-ha-mS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311.5942028985507" y="26.785714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" width="20" height="20"/>
+        <image name="history" width="20" height="20"/>
+        <image name="home" width="20" height="20"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

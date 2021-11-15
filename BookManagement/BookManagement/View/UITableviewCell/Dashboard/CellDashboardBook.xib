@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GILROY-MEDIUM.OTF">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="uLY-QV-puV" customClass="CellDashboardBook" customModule="BookManagement" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uLY-QV-puV" id="9if-Yk-QGQ">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkX-qm-XO1">
+                        <rect key="frame" x="5" y="5" width="320" height="107"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilh-0U-R0l">
+                                <rect key="frame" x="10" y="10" width="90" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-Vt-MB3">
+                                <rect key="frame" x="105" y="10" width="135" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-kp-h24">
+                                <rect key="frame" x="10" y="35" width="102.5" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCE-hf-J96">
+                                <rect key="frame" x="117.5" y="35" width="122.5" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpO-IP-liM">
+                                <rect key="frame" x="10" y="60" width="47" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IE-8h-dx9">
+                                <rect key="frame" x="62" y="60" width="178" height="15"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXy-VK-rlM">
+                                <rect key="frame" x="10" y="85" width="230" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="z3a-xd-VUT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXi-oR-Kjg">
+                                <rect key="frame" x="250" y="10" width="60" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="kJT-43-uDa"/>
+                                    <constraint firstAttribute="width" constant="60" id="x9f-2M-e9G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="12"/>
+                                <state key="normal" title="Buy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ilh-0U-R0l" firstAttribute="leading" secondItem="GkX-qm-XO1" secondAttribute="leading" constant="10" id="5ow-1R-rMG"/>
+                            <constraint firstItem="MCE-hf-J96" firstAttribute="bottom" secondItem="kmz-kp-h24" secondAttribute="bottom" id="8Oo-bm-DsD"/>
+                            <constraint firstItem="YXi-oR-Kjg" firstAttribute="leading" secondItem="PIX-Vt-MB3" secondAttribute="trailing" constant="10" id="8ja-bA-bav"/>
+                            <constraint firstItem="MCE-hf-J96" firstAttribute="leading" secondItem="kmz-kp-h24" secondAttribute="trailing" constant="5" id="92c-jl-TnX"/>
+                            <constraint firstItem="PIX-Vt-MB3" firstAttribute="leading" secondItem="ilh-0U-R0l" secondAttribute="trailing" constant="5" id="EjP-1f-INJ"/>
+                            <constraint firstAttribute="bottom" secondItem="hXy-VK-rlM" secondAttribute="bottom" constant="7" id="Kk4-7j-P1V"/>
+                            <constraint firstItem="0IE-8h-dx9" firstAttribute="bottom" secondItem="kpO-IP-liM" secondAttribute="bottom" id="L3g-EZ-7Cs"/>
+                            <constraint firstAttribute="trailing" secondItem="YXi-oR-Kjg" secondAttribute="trailing" constant="10" id="Lft-51-Ftf"/>
+                            <constraint firstItem="0IE-8h-dx9" firstAttribute="top" secondItem="kpO-IP-liM" secondAttribute="top" id="OE1-AA-pwJ"/>
+                            <constraint firstItem="hXy-VK-rlM" firstAttribute="leading" secondItem="ilh-0U-R0l" secondAttribute="leading" id="PWg-wr-O4c"/>
+                            <constraint firstItem="hXy-VK-rlM" firstAttribute="top" secondItem="kpO-IP-liM" secondAttribute="bottom" constant="10" id="Ppa-V8-JbF"/>
+                            <constraint firstItem="hXy-VK-rlM" firstAttribute="trailing" secondItem="PIX-Vt-MB3" secondAttribute="trailing" id="TmG-1s-3B0"/>
+                            <constraint firstItem="MCE-hf-J96" firstAttribute="trailing" secondItem="PIX-Vt-MB3" secondAttribute="trailing" id="WAr-JY-cxu"/>
+                            <constraint firstItem="PIX-Vt-MB3" firstAttribute="top" secondItem="ilh-0U-R0l" secondAttribute="top" id="Ywk-9q-5GT"/>
+                            <constraint firstItem="YXi-oR-Kjg" firstAttribute="top" secondItem="ilh-0U-R0l" secondAttribute="top" id="ZDC-6n-mmZ"/>
+                            <constraint firstItem="kpO-IP-liM" firstAttribute="top" secondItem="kmz-kp-h24" secondAttribute="bottom" constant="10" id="Zxd-4d-Gok"/>
+                            <constraint firstItem="kmz-kp-h24" firstAttribute="top" secondItem="ilh-0U-R0l" secondAttribute="bottom" constant="10" id="dz1-s2-xHc"/>
+                            <constraint firstItem="0IE-8h-dx9" firstAttribute="leading" secondItem="kpO-IP-liM" secondAttribute="trailing" constant="5" id="hRI-Li-dIk"/>
+                            <constraint firstItem="PIX-Vt-MB3" firstAttribute="bottom" secondItem="ilh-0U-R0l" secondAttribute="bottom" id="kMk-eS-HYN"/>
+                            <constraint firstItem="kmz-kp-h24" firstAttribute="leading" secondItem="ilh-0U-R0l" secondAttribute="leading" id="nf5-ui-P01"/>
+                            <constraint firstItem="kpO-IP-liM" firstAttribute="leading" secondItem="ilh-0U-R0l" secondAttribute="leading" id="onf-X1-N4X"/>
+                            <constraint firstItem="ilh-0U-R0l" firstAttribute="top" secondItem="GkX-qm-XO1" secondAttribute="top" constant="10" id="tAa-GQ-Sb3"/>
+                            <constraint firstItem="0IE-8h-dx9" firstAttribute="trailing" secondItem="PIX-Vt-MB3" secondAttribute="trailing" id="tz2-U5-tS0"/>
+                            <constraint firstItem="MCE-hf-J96" firstAttribute="top" secondItem="kmz-kp-h24" secondAttribute="top" id="xBP-lq-NTU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GkX-qm-XO1" firstAttribute="top" secondItem="9if-Yk-QGQ" secondAttribute="top" constant="5" id="4fF-UI-BiR"/>
+                    <constraint firstAttribute="bottom" secondItem="GkX-qm-XO1" secondAttribute="bottom" constant="5" id="Rlp-VT-1gt"/>
+                    <constraint firstItem="GkX-qm-XO1" firstAttribute="leading" secondItem="9if-Yk-QGQ" secondAttribute="leading" constant="5" id="eWz-1p-MNb"/>
+                    <constraint firstAttribute="trailing" secondItem="GkX-qm-XO1" secondAttribute="trailing" constant="5" id="oqs-8T-Uvj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="y43-1A-VF3"/>
+            <connections>
+                <outlet property="authorNameLbl" destination="MCE-hf-J96" id="vTV-YP-Itu"/>
+                <outlet property="bookNameLbl" destination="PIX-Vt-MB3" id="G6O-i5-SfB"/>
+                <outlet property="outerView" destination="GkX-qm-XO1" id="0ZZ-y2-yOr"/>
+                <outlet property="priceLbl" destination="0IE-8h-dx9" id="ASB-ST-YHz"/>
+                <outlet property="purchaseBtn" destination="YXi-oR-Kjg" id="Bfw-ox-fPM"/>
+                <outlet property="shortDescriptionLbl" destination="hXy-VK-rlM" id="qTg-bj-twT"/>
+            </connections>
+            <point key="canvasLocation" x="42.028985507246382" y="63.950892857142854"/>
+        </tableViewCell>
+    </objects>
+</document>
